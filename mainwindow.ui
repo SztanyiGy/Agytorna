@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1000</width>
-    <height>700</height>
+    <height>705</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -206,7 +206,7 @@ QLabel#categoryLabel {
        </size>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+       <enum>QFrame::Shape::StyledPanel</enum>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
        <property name="spacing">
@@ -226,36 +226,162 @@ QLabel#categoryLabel {
        </property>
        <item>
         <widget class="QPushButton" name="homeButton">
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>50</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+        border-color: rgb(255, 255, 255);
+           background-color: rgba(255, 255, 255, 0.1);
+           border: none;
+           border-radius: 10px;
+       }
+       QPushButton:hover {
+           background-color: rgba(255, 255, 255, 0.2);
+       }</string>
+         </property>
          <property name="text">
-          <string>🏠</string>
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset theme="go-home"/>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QPushButton" name="languagesButton">
-         <property name="text">
-          <string>🌍</string>
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>50</height>
+          </size>
          </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="statsButton">
+         <property name="maximumSize">
+          <size>
+           <width>50</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+           background-color: rgba(255, 255, 255, 0.1);
+           border: none;
+           border-radius: 10px;
+       }
+       QPushButton:hover {
+           background-color: rgba(255, 255, 255, 0.2);
+       }</string>
+         </property>
          <property name="text">
-          <string>📊</string>
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset theme="preferences-desktop-locale"/>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QPushButton" name="profileButton">
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>50</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+           background-color: rgba(255, 255, 255, 0.1);
+           border: none;
+           border-radius: 10px;
+       }
+       QPushButton:hover {
+           background-color: rgba(255, 255, 255, 0.2);
+
+       }</string>
+         </property>
          <property name="text">
-          <string>👤</string>
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset theme="user-available"/>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="statsButton">
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>50</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+           background-color: rgba(255, 255, 255, 0.1);
+           border: none;
+           border-radius: 10px;
+       }
+       QPushButton:hover {
+           background-color: rgba(255, 255, 255, 0.2);
+       }</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset theme="QIcon::ThemeIcon::AddressBookNew"/>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>32</width>
+           <height>32</height>
+          </size>
          </property>
         </widget>
        </item>
        <item>
         <spacer name="verticalSpacer">
          <property name="orientation">
-          <enum>Qt::Vertical</enum>
+          <enum>Qt::Orientation::Vertical</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
@@ -267,6 +393,9 @@ QLabel#categoryLabel {
        </item>
        <item>
         <widget class="QPushButton" name="logoutButton">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(0, 0, 0);</string>
+         </property>
          <property name="text">
           <string>🚪</string>
          </property>
@@ -278,7 +407,7 @@ QLabel#categoryLabel {
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="mainMenuPage">
        <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -303,20 +432,20 @@ QLabel#categoryLabel {
            <string>Üdvözöl az Agytorna! 🧠</string>
           </property>
           <property name="alignment">
-           <set>Qt::AlignCenter</set>
+           <set>Qt::AlignmentFlag::AlignCenter</set>
           </property>
          </widget>
         </item>
         <item>
          <widget class="QLabel" name="subtitleLabel">
+          <property name="styleSheet">
+           <string notr="true">font-size: 18px; color: #7f8c8d;</string>
+          </property>
           <property name="text">
            <string>Válassz nyelvet és kezdj el tanulni!</string>
           </property>
           <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">font-size: 18px; color: #7f8c8d;</string>
+           <set>Qt::AlignmentFlag::AlignCenter</set>
           </property>
          </widget>
         </item>
@@ -333,40 +462,40 @@ QLabel#categoryLabel {
             <layout class="QVBoxLayout" name="verticalLayout_10">
              <item>
               <widget class="QLabel" name="statsIcon1">
+               <property name="styleSheet">
+                <string notr="true">font-size: 32px;</string>
+               </property>
                <property name="text">
                 <string>🎯</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">font-size: 32px;</string>
+                <set>Qt::AlignmentFlag::AlignCenter</set>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QLabel" name="completedLabel">
+               <property name="styleSheet">
+                <string notr="true">font-size: 28px; font-weight: bold; color: #27ae60;</string>
+               </property>
                <property name="text">
                 <string>0</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">font-size: 28px; font-weight: bold; color: #27ae60;</string>
+                <set>Qt::AlignmentFlag::AlignCenter</set>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QLabel" name="completedText">
+               <property name="styleSheet">
+                <string notr="true">font-size: 12px; color: #7f8c8d;</string>
+               </property>
                <property name="text">
                 <string>Teljesített kvíz</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">font-size: 12px; color: #7f8c8d;</string>
+                <set>Qt::AlignmentFlag::AlignCenter</set>
                </property>
               </widget>
              </item>
@@ -384,40 +513,40 @@ QLabel#categoryLabel {
             <layout class="QVBoxLayout" name="verticalLayout_11">
              <item>
               <widget class="QLabel" name="statsIcon2">
+               <property name="styleSheet">
+                <string notr="true">font-size: 32px;</string>
+               </property>
                <property name="text">
                 <string>📚</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">font-size: 32px;</string>
+                <set>Qt::AlignmentFlag::AlignCenter</set>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QLabel" name="wordsLearnedLabel">
+               <property name="styleSheet">
+                <string notr="true">font-size: 28px; font-weight: bold; color: #3498db;</string>
+               </property>
                <property name="text">
                 <string>0</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">font-size: 28px; font-weight: bold; color: #3498db;</string>
+                <set>Qt::AlignmentFlag::AlignCenter</set>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QLabel" name="wordsLearnedText">
+               <property name="styleSheet">
+                <string notr="true">font-size: 12px; color: #7f8c8d;</string>
+               </property>
                <property name="text">
                 <string>Megtanult szó</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">font-size: 12px; color: #7f8c8d;</string>
+                <set>Qt::AlignmentFlag::AlignCenter</set>
                </property>
               </widget>
              </item>
@@ -435,40 +564,40 @@ QLabel#categoryLabel {
             <layout class="QVBoxLayout" name="verticalLayout_12">
              <item>
               <widget class="QLabel" name="statsIcon3">
+               <property name="styleSheet">
+                <string notr="true">font-size: 32px;</string>
+               </property>
                <property name="text">
                 <string>🔥</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">font-size: 32px;</string>
+                <set>Qt::AlignmentFlag::AlignCenter</set>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QLabel" name="streakLabel">
+               <property name="styleSheet">
+                <string notr="true">font-size: 28px; font-weight: bold; color: #e74c3c;</string>
+               </property>
                <property name="text">
                 <string>0</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">font-size: 28px; font-weight: bold; color: #e74c3c;</string>
+                <set>Qt::AlignmentFlag::AlignCenter</set>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QLabel" name="streakText">
+               <property name="styleSheet">
+                <string notr="true">font-size: 12px; color: #7f8c8d;</string>
+               </property>
                <property name="text">
                 <string>Napos sorozat</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">font-size: 12px; color: #7f8c8d;</string>
+                <set>Qt::AlignmentFlag::AlignCenter</set>
                </property>
               </widget>
              </item>
@@ -483,7 +612,7 @@ QLabel#categoryLabel {
            <string>Válassz nyelvet 🌍</string>
           </property>
           <property name="alignment">
-           <set>Qt::AlignCenter</set>
+           <set>Qt::AlignmentFlag::AlignCenter</set>
           </property>
          </widget>
         </item>
@@ -494,6 +623,10 @@ QLabel#categoryLabel {
           </property>
           <item row="0" column="0">
            <widget class="QPushButton" name="hungarianButton">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);</string>
+            </property>
             <property name="text">
              <string>🇭🇺 Magyar</string>
             </property>
@@ -501,6 +634,9 @@ QLabel#categoryLabel {
           </item>
           <item row="0" column="1">
            <widget class="QPushButton" name="englishButton">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(0, 0, 0);</string>
+            </property>
             <property name="text">
              <string>🇬🇧 English</string>
             </property>
@@ -508,6 +644,9 @@ QLabel#categoryLabel {
           </item>
           <item row="1" column="0">
            <widget class="QPushButton" name="germanButton">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(0, 0, 0);</string>
+            </property>
             <property name="text">
              <string>🇩🇪 Deutsch</string>
             </property>
@@ -515,6 +654,9 @@ QLabel#categoryLabel {
           </item>
           <item row="1" column="1">
            <widget class="QPushButton" name="russianButton">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(0, 0, 0);</string>
+            </property>
             <property name="text">
              <string>🇷🇺 Русский</string>
             </property>
@@ -525,7 +667,7 @@ QLabel#categoryLabel {
         <item>
          <spacer name="verticalSpacer_2">
           <property name="orientation">
-           <enum>Qt::Vertical</enum>
+           <enum>Qt::Orientation::Vertical</enum>
           </property>
           <property name="sizeHint" stdset="0">
            <size>
@@ -556,27 +698,27 @@ QLabel#categoryLabel {
         </property>
         <item>
          <widget class="QLabel" name="categoryTitle">
+          <property name="styleSheet">
+           <string notr="true">font-size: 28px; font-weight: bold; color: #2c3e50;</string>
+          </property>
           <property name="text">
            <string>Válassz kategóriát 📚</string>
           </property>
           <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">font-size: 28px; font-weight: bold; color: #2c3e50;</string>
+           <set>Qt::AlignmentFlag::AlignCenter</set>
           </property>
          </widget>
         </item>
         <item>
          <widget class="QLabel" name="selectedLanguageLabel">
+          <property name="styleSheet">
+           <string notr="true">font-size: 16px; color: #7f8c8d;</string>
+          </property>
           <property name="text">
            <string>Kiválasztott nyelv: Magyar 🇭🇺</string>
           </property>
           <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">font-size: 16px; color: #7f8c8d;</string>
+           <set>Qt::AlignmentFlag::AlignCenter</set>
           </property>
          </widget>
         </item>
@@ -587,6 +729,9 @@ QLabel#categoryLabel {
           </property>
           <item row="0" column="0">
            <widget class="QPushButton" name="vocabularyButton">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(0, 0, 0);</string>
+            </property>
             <property name="text">
              <string>📖 Szókincs</string>
             </property>
@@ -594,6 +739,9 @@ QLabel#categoryLabel {
           </item>
           <item row="0" column="1">
            <widget class="QPushButton" name="grammarButton">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(0, 0, 0);</string>
+            </property>
             <property name="text">
              <string>✏️ Nyelvtan</string>
             </property>
@@ -601,6 +749,9 @@ QLabel#categoryLabel {
           </item>
           <item row="1" column="0">
            <widget class="QPushButton" name="sentencesButton">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(0, 0, 0);</string>
+            </property>
             <property name="text">
              <string>💬 Mondatok</string>
             </property>
@@ -608,6 +759,9 @@ QLabel#categoryLabel {
           </item>
           <item row="1" column="1">
            <widget class="QPushButton" name="listeningButton">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(0, 0, 0);</string>
+            </property>
             <property name="text">
              <string>🎧 Hallás utáni</string>
             </property>
@@ -617,14 +771,14 @@ QLabel#categoryLabel {
         </item>
         <item>
          <widget class="QLabel" name="difficultyTitle">
+          <property name="styleSheet">
+           <string notr="true">font-size: 24px; font-weight: bold; color: #2c3e50;</string>
+          </property>
           <property name="text">
            <string>Válassz nehézségi szintet 🎯</string>
           </property>
           <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">font-size: 24px; font-weight: bold; color: #2c3e50;</string>
+           <set>Qt::AlignmentFlag::AlignCenter</set>
           </property>
          </widget>
         </item>
@@ -635,6 +789,9 @@ QLabel#categoryLabel {
           </property>
           <item>
            <widget class="QPushButton" name="beginnerButton">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(0, 0, 0);</string>
+            </property>
             <property name="text">
              <string>🌱 Kezdő</string>
             </property>
@@ -642,6 +799,9 @@ QLabel#categoryLabel {
           </item>
           <item>
            <widget class="QPushButton" name="intermediateButton">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(0, 0, 0);</string>
+            </property>
             <property name="text">
              <string>⭐ Haladó</string>
             </property>
@@ -649,6 +809,9 @@ QLabel#categoryLabel {
           </item>
           <item>
            <widget class="QPushButton" name="advancedButton">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(0, 0, 0);</string>
+            </property>
             <property name="text">
              <string>🏆 Profi</string>
             </property>
@@ -666,6 +829,9 @@ QLabel#categoryLabel {
               <height>50</height>
              </size>
             </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(0, 0, 0);</string>
+            </property>
             <property name="text">
              <string>⬅ Vissza</string>
             </property>
@@ -674,7 +840,7 @@ QLabel#categoryLabel {
           <item>
            <spacer name="horizontalSpacer_2">
             <property name="orientation">
-             <enum>Qt::Horizontal</enum>
+             <enum>Qt::Orientation::Horizontal</enum>
             </property>
             <property name="sizeHint" stdset="0">
              <size>
@@ -692,17 +858,17 @@ QLabel#categoryLabel {
               <height>50</height>
              </size>
             </property>
-            <property name="text">
-             <string>Kvíz indítása! 🚀</string>
-            </property>
             <property name="styleSheet">
              <string notr="true">QPushButton {
-    background-color: #27ae60;
+    background-color: #000000;
     font-size: 18px;
 }
 QPushButton:hover {
-    background-color: #229954;
+    background-color: #000000;
 }</string>
+            </property>
+            <property name="text">
+             <string>Kvíz indítása! 🚀</string>
             </property>
            </widget>
           </item>
@@ -711,7 +877,7 @@ QPushButton:hover {
         <item>
          <spacer name="verticalSpacer_3">
           <property name="orientation">
-           <enum>Qt::Vertical</enum>
+           <enum>Qt::Orientation::Vertical</enum>
           </property>
           <property name="sizeHint" stdset="0">
            <size>
@@ -744,18 +910,18 @@ QPushButton:hover {
          <layout class="QHBoxLayout" name="quizHeaderLayout">
           <item>
            <widget class="QLabel" name="questionNumberLabel">
-            <property name="text">
-             <string>Kérdés 1/10</string>
-            </property>
             <property name="styleSheet">
              <string notr="true">font-size: 16px; color: #7f8c8d;</string>
+            </property>
+            <property name="text">
+             <string>Kérdés 1/10</string>
             </property>
            </widget>
           </item>
           <item>
            <spacer name="horizontalSpacer_3">
             <property name="orientation">
-             <enum>Qt::Horizontal</enum>
+             <enum>Qt::Orientation::Horizontal</enum>
             </property>
             <property name="sizeHint" stdset="0">
              <size>
@@ -767,21 +933,21 @@ QPushButton:hover {
           </item>
           <item>
            <widget class="QLabel" name="currentScoreLabel">
-            <property name="text">
-             <string>Pontszám: 0</string>
-            </property>
             <property name="styleSheet">
              <string notr="true">font-size: 16px; font-weight: bold; color: #27ae60;</string>
+            </property>
+            <property name="text">
+             <string>Pontszám: 0</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QLabel" name="categoryInfoLabel">
-            <property name="text">
-             <string>📖 Szókincs | 🌱 Kezdő</string>
-            </property>
             <property name="styleSheet">
              <string notr="true">font-size: 14px; color: #7f8c8d;</string>
+            </property>
+            <property name="text">
+             <string>📖 Szókincs | 🌱 Kezdő</string>
             </property>
            </widget>
           </item>
@@ -805,7 +971,7 @@ QPushButton:hover {
               <string>Mit jelent ez a szó magyarul?</string>
              </property>
              <property name="alignment">
-              <set>Qt::AlignCenter</set>
+              <set>Qt::AlignmentFlag::AlignCenter</set>
              </property>
              <property name="wordWrap">
               <bool>true</bool>
@@ -818,7 +984,7 @@ QPushButton:hover {
               <string>apple</string>
              </property>
              <property name="alignment">
-              <set>Qt::AlignCenter</set>
+              <set>Qt::AlignmentFlag::AlignCenter</set>
              </property>
             </widget>
            </item>
@@ -843,7 +1009,7 @@ QPushButton:hover {
               <string/>
              </property>
              <property name="alignment">
-              <set>Qt::AlignCenter</set>
+              <set>Qt::AlignmentFlag::AlignCenter</set>
              </property>
              <property name="wordWrap">
               <bool>true</bool>
@@ -863,9 +1029,6 @@ QPushButton:hover {
               <height>45</height>
              </size>
             </property>
-            <property name="text">
-             <string>❌ Kilépés</string>
-            </property>
             <property name="styleSheet">
              <string notr="true">QPushButton {
     background-color: #e74c3c;
@@ -874,12 +1037,15 @@ QPushButton:hover {
     background-color: #c0392b;
 }</string>
             </property>
+            <property name="text">
+             <string>❌ Kilépés</string>
+            </property>
            </widget>
           </item>
           <item>
            <spacer name="horizontalSpacer_4">
             <property name="orientation">
-             <enum>Qt::Horizontal</enum>
+             <enum>Qt::Orientation::Horizontal</enum>
             </property>
             <property name="sizeHint" stdset="0">
              <size>
@@ -896,6 +1062,9 @@ QPushButton:hover {
               <width>150</width>
               <height>45</height>
              </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(0, 0, 0);</string>
             </property>
             <property name="text">
              <string>Következő ➡</string>
@@ -925,21 +1094,21 @@ QPushButton:hover {
         </property>
         <item>
          <widget class="QLabel" name="resultsTitle">
+          <property name="styleSheet">
+           <string notr="true">font-size: 36px; font-weight: bold; color: #2c3e50;</string>
+          </property>
           <property name="text">
            <string>🎉 Kvíz Befejezve!</string>
           </property>
           <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">font-size: 36px; font-weight: bold; color: #2c3e50;</string>
+           <set>Qt::AlignmentFlag::AlignCenter</set>
           </property>
          </widget>
         </item>
         <item>
          <spacer name="verticalSpacer_4">
           <property name="orientation">
-           <enum>Qt::Vertical</enum>
+           <enum>Qt::Orientation::Vertical</enum>
           </property>
           <property name="sizeHint" stdset="0">
            <size>
@@ -962,7 +1131,7 @@ QPushButton:hover {
     background-color: white;
     border-radius: 25px;
     padding: 50px;
-    border: 3px solid #27ae60;
+    border: 3px solid #000000;
 }</string>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -971,14 +1140,14 @@ QPushButton:hover {
            </property>
            <item>
             <widget class="QLabel" name="scoreLabel">
+             <property name="styleSheet">
+              <string notr="true">font-size: 22px; color: #7f8c8d;</string>
+             </property>
              <property name="text">
               <string>A te eredményed:</string>
              </property>
              <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">font-size: 22px; color: #7f8c8d;</string>
+              <set>Qt::AlignmentFlag::AlignCenter</set>
              </property>
             </widget>
            </item>
@@ -988,46 +1157,46 @@ QPushButton:hover {
               <string>8 / 10</string>
              </property>
              <property name="alignment">
-              <set>Qt::AlignCenter</set>
+              <set>Qt::AlignmentFlag::AlignCenter</set>
              </property>
             </widget>
            </item>
            <item>
             <widget class="QLabel" name="percentageLabel">
+             <property name="styleSheet">
+              <string notr="true">font-size: 32px; font-weight: bold; color: #3498db;</string>
+             </property>
              <property name="text">
               <string>80%</string>
              </property>
              <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">font-size: 32px; font-weight: bold; color: #3498db;</string>
+              <set>Qt::AlignmentFlag::AlignCenter</set>
              </property>
             </widget>
            </item>
            <item>
             <widget class="QLabel" name="pointsLabel">
+             <property name="styleSheet">
+              <string notr="true">font-size: 24px; color: #f39c12;</string>
+             </property>
              <property name="text">
               <string>Pontszám: 80</string>
              </property>
              <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">font-size: 24px; color: #f39c12;</string>
+              <set>Qt::AlignmentFlag::AlignCenter</set>
              </property>
             </widget>
            </item>
            <item>
             <widget class="QLabel" name="messageLabel">
+             <property name="styleSheet">
+              <string notr="true">font-size: 20px; font-weight: bold; color: #27ae60;</string>
+             </property>
              <property name="text">
               <string>Nagyszerű munka! 👏</string>
              </property>
              <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">font-size: 20px; font-weight: bold; color: #27ae60;</string>
+              <set>Qt::AlignmentFlag::AlignCenter</set>
              </property>
             </widget>
            </item>
@@ -1037,7 +1206,7 @@ QPushButton:hover {
         <item>
          <spacer name="verticalSpacer_5">
           <property name="orientation">
-           <enum>Qt::Vertical</enum>
+           <enum>Qt::Orientation::Vertical</enum>
           </property>
           <property name="sizeHint" stdset="0">
            <size>
@@ -1057,6 +1226,9 @@ QPushButton:hover {
               <height>55</height>
              </size>
             </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(0, 0, 0);</string>
+            </property>
             <property name="text">
              <string>🏠 Főmenü</string>
             </property>
@@ -1070,16 +1242,16 @@ QPushButton:hover {
               <height>55</height>
              </size>
             </property>
-            <property name="text">
-             <string>🔄 Újra</string>
-            </property>
             <property name="styleSheet">
              <string notr="true">QPushButton {
-    background-color: #f39c12;
+    background-color: #000000;
 }
 QPushButton:hover {
-    background-color: #e67e22;
+    background-color: #000000;
 }</string>
+            </property>
+            <property name="text">
+             <string>🔄 Újra</string>
             </property>
            </widget>
           </item>
@@ -1091,16 +1263,16 @@ QPushButton:hover {
               <height>55</height>
              </size>
             </property>
-            <property name="text">
-             <string>⬆ Nehezebb</string>
-            </property>
             <property name="styleSheet">
              <string notr="true">QPushButton {
-    background-color: #27ae60;
+    background-color: #000000;
 }
 QPushButton:hover {
-    background-color: #229954;
+    background-color: #000000;
 }</string>
+            </property>
+            <property name="text">
+             <string>⬆ Nehezebb</string>
             </property>
            </widget>
           </item>
@@ -1127,14 +1299,14 @@ QPushButton:hover {
         </property>
         <item>
          <widget class="QLabel" name="statsPageTitle">
+          <property name="styleSheet">
+           <string notr="true">font-size: 32px; font-weight: bold; color: #2c3e50;</string>
+          </property>
           <property name="text">
            <string>📊 Statisztikáid</string>
           </property>
           <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">font-size: 32px; font-weight: bold; color: #2c3e50;</string>
+           <set>Qt::AlignmentFlag::AlignCenter</set>
           </property>
          </widget>
         </item>
@@ -1154,40 +1326,40 @@ QPushButton:hover {
             <layout class="QVBoxLayout" name="verticalLayout_13">
              <item>
               <widget class="QLabel" name="langIcon1">
+               <property name="styleSheet">
+                <string notr="true">font-size: 40px;</string>
+               </property>
                <property name="text">
                 <string>🇭🇺</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">font-size: 40px;</string>
+                <set>Qt::AlignmentFlag::AlignCenter</set>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QLabel" name="langName1">
+               <property name="styleSheet">
+                <string notr="true">font-size: 18px; font-weight: bold;</string>
+               </property>
                <property name="text">
                 <string>Magyar</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">font-size: 18px; font-weight: bold;</string>
+                <set>Qt::AlignmentFlag::AlignCenter</set>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QLabel" name="langStats1">
+               <property name="styleSheet">
+                <string notr="true">font-size: 14px; color: #7f8c8d;</string>
+               </property>
                <property name="text">
                 <string>25 szó | 85%</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">font-size: 14px; color: #7f8c8d;</string>
+                <set>Qt::AlignmentFlag::AlignCenter</set>
                </property>
               </widget>
              </item>
@@ -1205,40 +1377,40 @@ QPushButton:hover {
             <layout class="QVBoxLayout" name="verticalLayout_14">
              <item>
               <widget class="QLabel" name="langIcon2">
+               <property name="styleSheet">
+                <string notr="true">font-size: 40px;</string>
+               </property>
                <property name="text">
                 <string>🇬🇧</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">font-size: 40px;</string>
+                <set>Qt::AlignmentFlag::AlignCenter</set>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QLabel" name="langName2">
+               <property name="styleSheet">
+                <string notr="true">font-size: 18px; font-weight: bold;</string>
+               </property>
                <property name="text">
                 <string>English</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">font-size: 18px; font-weight: bold;</string>
+                <set>Qt::AlignmentFlag::AlignCenter</set>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QLabel" name="langStats2">
+               <property name="styleSheet">
+                <string notr="true">font-size: 14px; color: #7f8c8d;</string>
+               </property>
                <property name="text">
                 <string>42 szó | 92%</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">font-size: 14px; color: #7f8c8d;</string>
+                <set>Qt::AlignmentFlag::AlignCenter</set>
                </property>
               </widget>
              </item>
@@ -1256,40 +1428,40 @@ QPushButton:hover {
             <layout class="QVBoxLayout" name="verticalLayout_15">
              <item>
               <widget class="QLabel" name="langIcon3">
+               <property name="styleSheet">
+                <string notr="true">font-size: 40px;</string>
+               </property>
                <property name="text">
                 <string>🇩🇪</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">font-size: 40px;</string>
+                <set>Qt::AlignmentFlag::AlignCenter</set>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QLabel" name="langName3">
+               <property name="styleSheet">
+                <string notr="true">font-size: 18px; font-weight: bold;</string>
+               </property>
                <property name="text">
                 <string>Deutsch</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">font-size: 18px; font-weight: bold;</string>
+                <set>Qt::AlignmentFlag::AlignCenter</set>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QLabel" name="langStats3">
+               <property name="styleSheet">
+                <string notr="true">font-size: 14px; color: #7f8c8d;</string>
+               </property>
                <property name="text">
                 <string>18 szó | 78%</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">font-size: 14px; color: #7f8c8d;</string>
+                <set>Qt::AlignmentFlag::AlignCenter</set>
                </property>
               </widget>
              </item>
@@ -1307,40 +1479,40 @@ QPushButton:hover {
             <layout class="QVBoxLayout" name="verticalLayout_16">
              <item>
               <widget class="QLabel" name="langIcon4">
+               <property name="styleSheet">
+                <string notr="true">font-size: 40px;</string>
+               </property>
                <property name="text">
                 <string>🇷🇺</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">font-size: 40px;</string>
+                <set>Qt::AlignmentFlag::AlignCenter</set>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QLabel" name="langName4">
+               <property name="styleSheet">
+                <string notr="true">font-size: 18px; font-weight: bold;</string>
+               </property>
                <property name="text">
                 <string>Русский</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">font-size: 18px; font-weight: bold;</string>
+                <set>Qt::AlignmentFlag::AlignCenter</set>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QLabel" name="langStats4">
+               <property name="styleSheet">
+                <string notr="true">font-size: 14px; color: #7f8c8d;</string>
+               </property>
                <property name="text">
                 <string>12 szó | 70%</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">font-size: 14px; color: #7f8c8d;</string>
+                <set>Qt::AlignmentFlag::AlignCenter</set>
                </property>
               </widget>
              </item>
@@ -1357,6 +1529,9 @@ QPushButton:hover {
             <height>50</height>
            </size>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(0, 0, 0);</string>
+          </property>
           <property name="text">
            <string>⬅ Vissza a főmenübe</string>
           </property>
@@ -1365,7 +1540,7 @@ QPushButton:hover {
         <item>
          <spacer name="verticalSpacer_6">
           <property name="orientation">
-           <enum>Qt::Vertical</enum>
+           <enum>Qt::Orientation::Vertical</enum>
           </property>
           <property name="sizeHint" stdset="0">
            <size>
