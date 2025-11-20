@@ -23,6 +23,9 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(Agytorna
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        gamelogic.cpp
+        gametypes.h
+        gamelogic.h
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Agytorna APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
