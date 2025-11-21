@@ -97,21 +97,17 @@ void MainWindow::showResults()
 {
     ui->stackedWidget->setCurrentWidget(ui->resultsPage);
 
-    // Eredmények számítása és megjelenítése
+    // Eredmények
     QString scoreText = QString("%1 / %2").arg(correctAnswers).arg(currentQuestions.size());
-    ui->resultLabel->setText(scoreText);
-
     double percentage = (currentQuestions.size() > 0)
                             ? (correctAnswers * 100.0 / currentQuestions.size())
                             : 0.0;
+
+    ui->resultLabel->setText(scoreText);
     ui->percentageLabel->setText(QString("%1%").arg(QString::number(percentage, 'f', 0)));
-
     ui->pointsLabel->setText(QString("Pontszám: %1").arg(totalPoints));
-
-    // Motivációs üzenet
     ui->messageLabel->setText(getMotivationalMessage(percentage));
 
-    // Statisztika mentése backend-be
     updateStatisticsInBackend();
 }
 
